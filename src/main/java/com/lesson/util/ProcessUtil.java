@@ -11,17 +11,17 @@ import java.util.Scanner;
 
 public class ProcessUtil {
 
-    private static Teacher[] teachers = new Teacher[]{createInitTeacher()};
+    private static Teacher[] teachers = createInitTeacher();
 
 
     public static void execute(String[] args) {
         Scanner scanner = new Scanner(System.in);
         TeacherInter teacherInter = ServiceUtil.teacherServiceFactory(args[0]);
         StudentInter studentInter = ServiceUtil.studentServiceFactory(args[0]);
-
+        Teacher[] teachers = null;
         while (true) {
 
-
+b
             System.out.println("Eger teacher yaratmaq isteyirsense create yaz\n" +
                     "teacher ve ya studenti update etmek isteyirsense update yaz \n" +
                     "studenti silmek isteyirsinizse remove yazin\n" +
@@ -65,13 +65,12 @@ public class ProcessUtil {
         }
     }
 
-    private static Teacher createInitTeacher() {
+    private static Teacher[] createInitTeacher() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("kursda neçə muellim iwleyir: ");
         Integer count = scanner.nextInt();
-        System.out.println(StaticData.getTeachers(count));
 
-        return null;
+        return StaticData.getTeachers(count);
     }
 
     private static int getEmptyIndex() {
