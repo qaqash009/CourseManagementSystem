@@ -18,10 +18,9 @@ public class ProcessUtil {
         Scanner scanner = new Scanner(System.in);
         TeacherInter teacherInter = ServiceUtil.teacherServiceFactory(args[0]);
         StudentInter studentInter = ServiceUtil.studentServiceFactory(args[0]);
-        Teacher[] teachers = null;
         while (true) {
 
-b
+
             System.out.println("Eger teacher yaratmaq isteyirsense create yaz\n" +
                     "teacher ve ya studenti update etmek isteyirsense update yaz \n" +
                     "studenti silmek isteyirsinizse remove yazin\n" +

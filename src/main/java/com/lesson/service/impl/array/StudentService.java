@@ -2,13 +2,14 @@ package com.lesson.service.impl.array;
 
 
 import com.lesson.models.Student;
+import com.lesson.myannotation.TestAnnotation;
 import com.lesson.service.inter.StudentInter;
 
 import java.time.LocalDateTime;
 import java.util.Scanner;
 
 import static com.lesson.util.ServiceUtil.setGender;
-
+@TestAnnotation
 
 public class StudentService implements StudentInter {
     @Override
@@ -41,7 +42,7 @@ public class StudentService implements StudentInter {
             String updatedDate = scanner.nextLine();
             if ("adini".equals(updatedDate)) {
                 System.out.println("sagirdin yeni adini daxil edin: ");
-                student.setSurname(scanner.nextLine());
+                student.setName(scanner.nextLine());
                 System.out.println("update olundu");
             } else if ("soyadini".equals(updatedDate)) {
                 student.setSurname(scanner.nextLine());

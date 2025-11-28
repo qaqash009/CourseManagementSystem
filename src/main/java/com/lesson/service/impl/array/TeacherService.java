@@ -28,8 +28,6 @@ public class TeacherService implements TeacherInter {
 
         System.out.println("Muellimin maasini daxil edin: ");
         Double sallary = sc.nextDouble();
-
-
         return new Teacher(name, surname, age, setGender(scanner, "teacher"), sallary, createStudents());
 
     }
