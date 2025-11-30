@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ca476e5-92d7-4f1c-b64e-0ad937e98a99" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lesson/myannotation/TestAnnotation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/models/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/models/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/models/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/models/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/models/Teacher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/service/impl/array/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/service/impl/array/StudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/service/impl/array/TeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/service/impl/array/TeacherService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/util/ProcessUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/util/ProcessUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,10 +26,10 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/com/lesson/models/Gender.java" root0="SKIP_HIGHLIGHTING" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "6800bdff",
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;6800bdff&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="35w2oPbwxuR9iuEhHZdchsa6tLQ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
