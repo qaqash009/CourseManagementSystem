@@ -1,0 +1,32 @@
+package com.lesson.service.impl.list;
+
+import com.lesson.models.Student;
+import com.lesson.service.impl.array.StudentService;
+import com.lesson.service.inter.StudentInter;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class TeacherListService extends StudentService implements StudentInter {
+
+    private List<Student> createStudents() {
+        StudentService studentService = new StudentService();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Sagirdlerin sayini qeyd edin: ");
+        int count = scanner.nextInt();
+        scanner.nextLine();
+
+        List<Student> studentsList = new ArrayList<>();
+
+        for (int i = 0; i < count; i++) {
+            Student student = studentService.create();
+            studentsList.add(student);
+        }
+
+        return studentsList;
+
+    }
+
+
+}
