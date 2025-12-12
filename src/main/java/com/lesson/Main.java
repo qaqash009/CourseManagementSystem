@@ -17,6 +17,8 @@ import java.util.Set;
 public class Main {
     public static void main(String[] args) throws IOException {
 
+
+
         Student student = new Student();
         student.setClas("1A");
         Student student2 = new Student();

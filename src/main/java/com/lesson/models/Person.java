@@ -15,7 +15,6 @@ public class Person {
     private String name;
     private String surname;
     private int age;
-    private String clas;
     private Gender gender;
 
     private LocalDateTime createdAt;
@@ -29,13 +28,12 @@ public class Person {
         this.gender = gender;
     }
 
-    public Person(Long id, String name, String surname, int age, String clas, Gender gender) {
+    public Person(String name, String surname, int age, String clas, Gender gender) {
 
         this.id = UUID.randomUUID();
         this.name = name;
         this.surname = surname;
         this.age = age;
-        this.clas = clas;
         this.gender = gender;
         this.createdAt = LocalDateTime.now();
         this.modifyAt = LocalDateTime.now();

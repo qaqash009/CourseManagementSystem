@@ -2,15 +2,15 @@ package com.lesson.models;
 
 
 public final class StaticData {
-    private static Teacher[] teachers;
+    public static Teacher[] teachers;
 
-    private  StaticData() {
+    private StaticData() {
     }
 
-    public static Teacher[] getTeachers(Integer count) {
+    public static void getTeachers(Integer count) {
         if (count == null) {
-            return new Teacher[1];
+            teachers = new Teacher[1];
         }
-        return new Teacher[count];
+        teachers = new Teacher[count];
     }
 }

@@ -2,17 +2,15 @@ package com.lesson.service.impl.array;
 
 
 import com.lesson.models.Student;
-import com.lesson.myannotation.TestAnnotation;
-import com.lesson.service.inter.StudentInter;
+import com.lesson.models.Teacher;
 
 import java.time.LocalDateTime;
 import java.util.Scanner;
 
+import static com.lesson.models.StaticData.teachers;
 import static com.lesson.util.ServiceUtil.setGender;
-@TestAnnotation
 
-public class StudentService implements StudentInter {
-    @Override
+public class StudentService{
     public Student create() {
 
         Scanner scanner = new Scanner(System.in);
@@ -31,7 +29,6 @@ public class StudentService implements StudentInter {
 
     }
 
-    @Override
 
     public Student update(Student student) {
         Scanner scanner = new Scanner(System.in);
@@ -72,7 +69,6 @@ public class StudentService implements StudentInter {
 
         return student;
     }
-    @Override
     public Student[] remove(Student[] students, String name, String surname) {
         Student[] newStudentsArr = new Student[students.length];
         int count = 0;
@@ -92,7 +88,6 @@ public class StudentService implements StudentInter {
 
     }
 
-    @Override
     public Student getWithNameAndSurname(Student[] students, String name, String surname) {
         for (Student student : students) {
             if (student.getName().equals(name) &&
@@ -105,4 +100,12 @@ public class StudentService implements StudentInter {
     }
 
 
+    // todo teacherin butun studentlerini topla bir arraya o arrayide men yaziram
+
+    public  Student[] collectStudent(Teacher teacher){
+        for (int i = 0; i < teachers.length ; i++) {
+
+        }
+        return teacher.getStudents();
+    }
 }

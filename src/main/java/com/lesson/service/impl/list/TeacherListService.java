@@ -2,13 +2,12 @@ package com.lesson.service.impl.list;
 
 import com.lesson.models.Student;
 import com.lesson.service.impl.array.StudentService;
-import com.lesson.service.inter.StudentInter;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class TeacherListService extends StudentService implements StudentInter {
+public class TeacherListService {
 
     private List<Student> createStudents() {
         StudentService studentService = new StudentService();
@@ -29,4 +28,23 @@ public class TeacherListService extends StudentService implements StudentInter {
     }
 
 
+    @Override
+    public Student create() {
+        return null;
+    }
+
+    @Override
+    public Student[] remove(Student[] students, String name, String surname) {
+        return new Student[0];
+    }
+
+    @Override
+    public Student update(Student student) {
+        return null;
+    }
+
+    @Override
+    public Student getWithNameAndSurname(Student[] students, String name, String surname) {
+        return null;
+    }
 }

@@ -2,10 +2,9 @@ package com.lesson.util;
 
 import com.lesson.models.Gender;
 import com.lesson.service.impl.array.StudentService;
-import com.lesson.service.impl.array.TeacherService;
+import com.lesson.service.impl.array.CourseService;
 import com.lesson.service.impl.file.StudentServiceFile;
-import com.lesson.service.inter.StudentInter;
-import com.lesson.service.inter.TeacherInter;
+import com.lesson.service.inter.CourseInter;
 
 import java.util.Scanner;
 
@@ -42,11 +41,11 @@ public class ServiceUtil {
         }
     }
 
-    public static TeacherInter teacherServiceFactory(String type) {
+    public static CourseInter teacherServiceFactory(String type) {
         if ("array".equals(type)) {
-            return new TeacherService();
+            return new CourseService();
         }
-        return new TeacherService();
+        return new CourseService();
     }
 
 

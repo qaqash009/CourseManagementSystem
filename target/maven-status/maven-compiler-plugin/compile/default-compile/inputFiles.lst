@@ -1,0 +1,15 @@
+C:\Users\idris\githubproject\CourseManagementSystem\src\main\java\com\lesson\Main.java
+C:\Users\idris\githubproject\CourseManagementSystem\src\main\java\com\lesson\models\Gender.java
+C:\Users\idris\githubproject\CourseManagementSystem\src\main\java\com\lesson\models\Person.java
+C:\Users\idris\githubproject\CourseManagementSystem\src\main\java\com\lesson\models\StaticData.java
+C:\Users\idris\githubproject\CourseManagementSystem\src\main\java\com\lesson\models\Student.java
+C:\Users\idris\githubproject\CourseManagementSystem\src\main\java\com\lesson\models\Teacher.java
+C:\Users\idris\githubproject\CourseManagementSystem\src\main\java\com\lesson\service\impl\array\CourseService.java
+C:\Users\idris\githubproject\CourseManagementSystem\src\main\java\com\lesson\service\impl\array\StudentService.java
+C:\Users\idris\githubproject\CourseManagementSystem\src\main\java\com\lesson\service\impl\array\TeacherService.java
+C:\Users\idris\githubproject\CourseManagementSystem\src\main\java\com\lesson\service\impl\file\StudentServiceFile.java
+C:\Users\idris\githubproject\CourseManagementSystem\src\main\java\com\lesson\service\impl\list\StudentListService.java
+C:\Users\idris\githubproject\CourseManagementSystem\src\main\java\com\lesson\service\impl\list\TeacherListService.java
+C:\Users\idris\githubproject\CourseManagementSystem\src\main\java\com\lesson\service\inter\CourseInter.java
+C:\Users\idris\githubproject\CourseManagementSystem\src\main\java\com\lesson\util\ProcessUtil.java
+C:\Users\idris\githubproject\CourseManagementSystem\src\main\java\com\lesson\util\ServiceUtil.java

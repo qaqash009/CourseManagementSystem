@@ -1,13 +1,11 @@
 package com.lesson.service.impl.list;
 
 import com.lesson.models.Student;
-import com.lesson.service.impl.array.StudentService;
-import com.lesson.service.inter.StudentInter;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class StudentListService extends StudentService implements StudentInter {
+public class StudentListService{
 
     public List<Student> remove(List<Student> students, String name, String surname) {
         List<Student> newStudentList = new ArrayList<>(students.size());
@@ -18,6 +16,22 @@ public class StudentListService extends StudentService implements StudentInter {
             }
         }
         return newStudentList;
+    }
+
+    public Student create() {
+        return null;
+    }
+
+    public Student[] remove(Student[] students, String name, String surname) {
+        return new Student[0];
+    }
+
+    public Student update(Student student) {
+        return null;
+    }
+
+    public Student getWithNameAndSurname(Student[] students, String name, String surname) {
+        return null;
     }
 }
 
