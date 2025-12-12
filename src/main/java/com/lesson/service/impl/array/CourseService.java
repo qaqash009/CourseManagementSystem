@@ -17,60 +17,28 @@ import static com.lesson.models.StaticData.teachers;
 public class CourseService implements CourseInter {
 
     private static TeacherService teacherService = new TeacherService();
+    private static StudentService studentService = new StudentService();
 
-    // todo add ele studenti ayrica
-
-    public void addStudent(List<Student> students, Student student) {
-        students.add(student);
+    //todo ovrride ele bu methodu
+    public void addStudent(UUID teacherId) {
+        Teacher teacher = teacherService.getById(teacherId);
+        Student[] students = teacher.getStudents();
+        Student student = studentService.create();
+        teacher.setStudents(teacherService.addStudent(students, student));
     }
 
 
     public void create() {
         teacherService.create();
     }
+@Override
+    // todo update student and teacher
+    public void update(UUID teacherId,UUID studentId) {
 
-    @Override
-    public void update(UUID teacherId) {
-        Scanner scanner = new Scanner(System.in);
-        Teacher teacher = teacherService.getById(teacherId);
-        boolean loop = true;
-
-        while (loop) {
-            // todo evde idris edecek ETDIM  +++
-            System.out.println("Muellimin ad, soyad, yas, sinif, gen'ni deyisdirirsiniz ? ('gen'i kisi/qadin): ");
-            String updatedField = scanner.nextLine();
-
-            if ("ad".equalsIgnoreCase(updatedField)) {
-                System.out.println("Muellimin yeni adini daxil edin: ");
-                teacher.setName(scanner.nextLine());
-                System.out.println("Update olundu ");
-            } else if ("soyad".equalsIgnoreCase(updatedField)) {
-                System.out.println("Muellimin yeni soyadini daxil edin: ");
-                teacher.setSurname(scanner.nextLine());
-                System.out.println("Update olundu ");
-            } else if ("yas".equalsIgnoreCase(updatedField)) {
-                System.out.println("Muellimin yeni yasini daxil edin: ");
-                teacher.setAge(scanner.nextInt());
-                System.out.println("Update olundu ");
-            } else if ("kisi".equalsIgnoreCase(updatedField)) {
-                System.out.println("Muellimin genini daxil edin: ");
-                teacher.setGender(Gender.MEN);
-                System.out.println("Update olundu ");
-            }else if ("qadin".equalsIgnoreCase(updatedField)) {
-                System.out.println("Muellimin genini daxil edin: ");
-                    teacher.setGender(Gender.WOMEN);
-                System.out.println("Update olundu ");
-            }
-            System.out.println("Yeniden update etmek isteyirsinizse 'he', eks halda 'yox' yazin: ");
-            String continueLoop = scanner.nextLine();
-            if ("yox".equalsIgnoreCase(continueLoop)) {
-                loop = false;
-            }
-        }
-        teacher.setModifyAt(LocalDateTime.now());
 
     }
 
+    // bundan istifade etsek o update methodunun ucerisini doldurariq
     public void studentUpdate(UUID studentId) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("update etmek istediyiniz sagirdin ad soyadini yazin : ");
@@ -80,20 +48,13 @@ public class CourseService implements CourseInter {
 
         //todo getById methodu yarat
 
-        Student student = studentService.getById(studentId);
-        studentService.update(student);
+//        Student student = studentService.getById(studentId);
+//        studentService.update(student);
     }
 
-    @Override
-    public Teacher getTeacherByNameAndSurname(String name, String surname) {
-        for (int i = 0; i < teachers.length; i++) {
-            if (teachers[i].getName().equals(name) && teachers[i].getSurname().equals(surname)) {
-                return teachers[i];
-            }
-        }
-        return null;
-    }
-
+// TODO
+// teacher ve studenti silmek  bununda methodunu yazmaq
+//birde get emeliyyatlari artiq yazilibdir
 
 }
 

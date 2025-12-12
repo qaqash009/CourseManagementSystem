@@ -8,7 +8,6 @@ import java.util.UUID;
 public interface CourseInter {
     void create();
 
-    void update(UUID teacherId);
+    void update(UUID teacherId, UUID studentId);
 
-    Teacher getTeacherByNameAndSurname(String name, String surname);
 }

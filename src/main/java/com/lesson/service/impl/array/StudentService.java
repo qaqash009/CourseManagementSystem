@@ -10,7 +10,8 @@ import java.util.Scanner;
 import static com.lesson.models.StaticData.teachers;
 import static com.lesson.util.ServiceUtil.setGender;
 
-public class StudentService{
+public class StudentService {
+
     public Student create() {
 
         Scanner scanner = new Scanner(System.in);
@@ -29,7 +30,7 @@ public class StudentService{
 
     }
 
-
+    // toso while loop icrisi komekci methoda al
     public Student update(Student student) {
         Scanner scanner = new Scanner(System.in);
         boolean loop = true;
@@ -54,8 +55,7 @@ public class StudentService{
             } else if ("gender".equals(updatedDate)) {
                 student.setGender(setGender(scanner, "student"));
                 System.out.println("update olundu");
-            }
-            else {
+            } else {
                 System.out.println("Yanlis daxil etdiniz, yeniden cehd edin.");
             }
             System.out.println("Eger yeniden update etmek isteyirsense 'he' eks halda 'yox' yaz.");
@@ -69,6 +69,7 @@ public class StudentService{
 
         return student;
     }
+
     public Student[] remove(Student[] students, String name, String surname) {
         Student[] newStudentsArr = new Student[students.length];
         int count = 0;
@@ -102,8 +103,8 @@ public class StudentService{
 
     // todo teacherin butun studentlerini topla bir arraya o arrayide men yaziram
 
-    public  Student[] collectStudent(Teacher teacher){
-        for (int i = 0; i < teachers.length ; i++) {
+    public Student[] collectStudent(Teacher teacher) {
+        for (int i = 0; i < teachers.length; i++) {
 
         }
         return teacher.getStudents();
