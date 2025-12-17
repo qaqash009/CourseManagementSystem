@@ -6,11 +6,14 @@ import com.lesson.models.Teacher;
 
 import java.time.LocalDateTime;
 import java.util.Scanner;
+import java.util.UUID;
 
 import static com.lesson.models.StaticData.teachers;
 import static com.lesson.util.ServiceUtil.setGender;
 
 public class StudentService {
+
+    private static TeacherService teacherService = new TeacherService();
 
     public Student create() {
 
@@ -30,7 +33,8 @@ public class StudentService {
 
     }
 
-    // toso while loop icrisi komekci methoda al
+
+
     public Student update(Student student) {
         Scanner scanner = new Scanner(System.in);
         boolean loop = true;
@@ -109,4 +113,22 @@ public class StudentService {
         }
         return teacher.getStudents();
     }
+
+
+    public Student getById(UUID studentId, UUID teacherId) {
+
+        Teacher teacher = teacherService.getById(teacherId);
+        Student[] students = teacher.getStudents();
+        for (int i = 0; i < students.length; i++) {
+            if (students[i].getId().equals(studentId)) {
+                return students[i];
+
+            }
+        }
+        return null;
+
+
+    }
+
+
 }

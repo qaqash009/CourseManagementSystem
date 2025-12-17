@@ -10,6 +10,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/service/impl/array/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/service/impl/array/StudentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/service/impl/array/TeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/service/impl/array/TeacherService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/service/inter/CourseInter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/service/inter/CourseInter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/util/ServiceUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/util/ServiceUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

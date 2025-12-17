@@ -28,22 +28,18 @@ public class TeacherListService {
     }
 
 
-    @Override
     public Student create() {
         return null;
     }
 
-    @Override
     public Student[] remove(Student[] students, String name, String surname) {
         return new Student[0];
     }
 
-    @Override
     public Student update(Student student) {
         return null;
     }
 
-    @Override
     public Student getWithNameAndSurname(Student[] students, String name, String surname) {
         return null;
     }

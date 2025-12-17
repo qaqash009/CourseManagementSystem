@@ -31,15 +31,15 @@ public class ServiceUtil {
         return Gender.NOT_SUPPORT;
     }
 
-    public static StudentInter studentServiceFactory(String type) {
-        if ("array".equals(type)) {
-            return new StudentService();
-        } else if ("file".equals(type)) {
-            return new StudentServiceFile();
-        } else {
-            return new StudentService();
-        }
-    }
+//    public static StudentInter studentServiceFactory(String type) {
+//        if ("array".equals(type)) {
+//            return new StudentService();
+//        } else if ("file".equals(type)) {
+//            return new StudentServiceFile();
+//        } else {
+//            return new StudentService();
+//        }
+//    }
 
     public static CourseInter teacherServiceFactory(String type) {
         if ("array".equals(type)) {

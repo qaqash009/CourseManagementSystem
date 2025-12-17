@@ -13,6 +13,7 @@ import static com.lesson.util.ServiceUtil.setGender;
 
 public class TeacherService {
 
+
     public Teacher create() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Muellimin adini daxil edin: ");
@@ -120,14 +121,18 @@ public class TeacherService {
                 System.out.println("Muellimin yeni soyadini daxil edin: ");
                 teacher.setSurname(scanner.nextLine());
                 System.out.println("Update olundu ");
+            } else if ("yaw".equalsIgnoreCase(updatedField)) {
+                System.out.println("Muellimin yeni yawini daxil edin: ");
+                teacher.setAge(scanner.nextInt());
+                System.out.println("Update olundu ");
+            } else if ("maaw".equalsIgnoreCase(updatedField)) {
+                System.out.println("Muellimin yeni yawini daxil edin: ");
+                teacher.setSalary(scanner.nextDouble());
+                System.out.println("Update olundu ");
+            }  else if ("gender".equals(updatedField)) {
+                teacher.setGender(setGender(scanner, "teacher"));
+                System.out.println("update olundu");
             }
-// TODO STUDENT UPDATE BURADAN SILINSIN VE TEACHERIN DIGER FIELDLERI BURA ELAVE EDILISIN
-            System.out.println("update etmek istediyiniz sagirdin ad soyadini yazin : ");
-            String studentName = scanner.nextLine();
-            String studentSurname = scanner.nextLine();
-            StudentService studentService = new StudentService();
-            Student student = studentService.getWithNameAndSurname(teacher.getStudents(), studentName, studentSurname);
-            studentService.update(student);
             System.out.println("Yeniden update etmek isteyirsinizse 'he', eks halda 'yox' yazin: ");
             String continueLoop = scanner.nextLine();
             if ("yox".equalsIgnoreCase(continueLoop)) {
@@ -155,6 +160,26 @@ public class TeacherService {
             }
         }
         return null;
+    }
+
+
+    public Teacher[] remove(Teacher[] teachers, String name, String surname) {
+        Teacher[] newTeachersArr = new Teacher[teachers.length];
+        int count = 0;
+        for (int i = 0; i < teachers.length; i++) {
+            Teacher teacher = teachers[i];
+            if (teacher.getName().equals(name) && teacher.getSurname().equals(surname)) {
+                count++;
+            } else {
+                if (count > 0) {
+                    newTeachersArr[i - 1] = teachers[i];
+                } else {
+                    newTeachersArr[i] = teachers[i];
+                }
+            }
+        }
+        return newTeachersArr;
+
     }
 
 
