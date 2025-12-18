@@ -7,10 +7,6 @@
     <list default="true" id="1ca476e5-92d7-4f1c-b64e-0ad937e98a99" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/service/impl/array/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/service/impl/array/CourseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/service/impl/array/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/service/impl/array/StudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/service/impl/array/TeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/service/impl/array/TeacherService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/service/inter/CourseInter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/service/inter/CourseInter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/util/ServiceUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/util/ServiceUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +25,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/lesson/models/Gender.java" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/lesson/models/Gender.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;6800bdff&quot;,

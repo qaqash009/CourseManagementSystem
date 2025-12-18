@@ -28,10 +28,41 @@ public class CourseService implements CourseInter {
 
     @Override
     public void update(String type, UUID teacherId, UUID studentId) {
-        // todo TYPE EGER TEACHERDISE TEACHERSRVICE ICERISINDE UPDATE METGODUNU CAGIR
-        // TODO TYPE EGER STUDENTDISE STUDENTSERVISIN ICERISNDE UPDATE MT SIN CAGIR
 
+        if ("muellim".equalsIgnoreCase(type)) {
 
+            teacherService.update(teacherId);
+
+        } else if ("wagird".equalsIgnoreCase(type)) {
+
+            studentService.update(studentId);
+
+        }
+        return;
+
+    }
+
+    public Teacher[] remove(String type, UUID teacherId, String name, String surname) {
+        Teacher[] newTeachersArr = new Teacher[teacherId.length];
+        int count = 0;
+
+        if (!"muellim".equals(type)) {
+            return type;
+        }
+
+        for (int i = 0; i < teacherId.length; i++) {
+            Teacher teacher = teacherId[i];
+            if (teacher.getId().equals(teacherId) && teacher.getName().equals(name) && teacher.getSurname().equals(surname)) {
+                count++;
+            } else {
+                if (count > 0) {
+                    newTeachersArr[i - 1] = teacherId[i];
+                } else {
+                    newTeachersArr[i] = teacherId[i];
+                }
+            }
+        }
+        return newTeachersArr;
     }
 
     // TODO REMOVE METHODU YARAT
