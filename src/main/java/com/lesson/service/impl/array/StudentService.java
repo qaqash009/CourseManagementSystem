@@ -34,10 +34,10 @@ public class StudentService {
     }
 
 
-
-    public Student update(Student student) {
+    public Student update(UUID teacherId, UUID studentId) {
         Scanner scanner = new Scanner(System.in);
         boolean loop = true;
+        Student student = getById(teacherId, studentId);
 
         while (loop) {
             System.out.println("Sagirdin adini/soyadini/yasini/sinifi deyisdirirsizse hemin yazilan tipde qeyd edin: ");
@@ -74,7 +74,9 @@ public class StudentService {
         return student;
     }
 
-    public Student[] remove(Student[] students, String name, String surname) {
+    public Student[] remove(UUID teacherId, String name, String surname) {
+        Teacher teacher = teacherService.getById(teacherId);
+        Student[] students = teacher.getStudents();
         Student[] newStudentsArr = new Student[students.length];
         int count = 0;
         for (int i = 0; i < students.length; i++) {
@@ -126,6 +128,7 @@ public class StudentService {
             }
         }
         return null;
+        // todo convert to list
 
 
     }

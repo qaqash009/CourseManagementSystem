@@ -105,54 +105,6 @@ public class TeacherService {
     }
 
 
-    public Teacher update(Teacher teacher) {
-        Scanner scanner = new Scanner(System.in);
-        boolean loop = true;
-
-        while (loop) {
-            System.out.println("Muellimin adinimi yoxsa soyadinimi deyisdirirsiniz? ('ad' və ya 'soyad' yazın): ");
-            String updatedField = scanner.nextLine();
-
-            if ("ad".equalsIgnoreCase(updatedField)) {
-                System.out.println("Muellimin yeni adini daxil edin: ");
-                teacher.setName(scanner.nextLine());
-                System.out.println("Update olundu ");
-            } else if ("soyad".equalsIgnoreCase(updatedField)) {
-                System.out.println("Muellimin yeni soyadini daxil edin: ");
-                teacher.setSurname(scanner.nextLine());
-                System.out.println("Update olundu ");
-            } else if ("yaw".equalsIgnoreCase(updatedField)) {
-                System.out.println("Muellimin yeni yawini daxil edin: ");
-                teacher.setAge(scanner.nextInt());
-                System.out.println("Update olundu ");
-            } else if ("maaw".equalsIgnoreCase(updatedField)) {
-                System.out.println("Muellimin yeni yawini daxil edin: ");
-                teacher.setSalary(scanner.nextDouble());
-                System.out.println("Update olundu ");
-            }  else if ("gender".equals(updatedField)) {
-                teacher.setGender(setGender(scanner, "teacher"));
-                System.out.println("update olundu");
-            }
-            System.out.println("Yeniden update etmek isteyirsinizse 'he', eks halda 'yox' yazin: ");
-            String continueLoop = scanner.nextLine();
-            if ("yox".equalsIgnoreCase(continueLoop)) {
-                loop = false;
-            }
-        }
-        teacher.setModifyAt(LocalDateTime.now());
-
-        return teacher;
-    }
-
-    public Teacher getByNameAndSurname(String name, String surname, Teacher[] teachers) {
-        for (int i = 0; i < teachers.length; i++) {
-            if (teachers[i].getName().equals(name) && teachers[i].getSurname().equals(surname)) {
-                return teachers[i];
-            }
-        }
-        return null;
-    }
-
     public Teacher getById(UUID teacherId) {
         for (int i = 0; i < teachers.length; i++) {
             if (teachers[i].getId().equals(teacherId)) {
@@ -163,7 +115,7 @@ public class TeacherService {
     }
 
 
-    public Teacher[] remove(Teacher[] teachers, String name, String surname) {
+    public Teacher[] remove( String name, String surname) {
         Teacher[] newTeachersArr = new Teacher[teachers.length];
         int count = 0;
         for (int i = 0; i < teachers.length; i++) {

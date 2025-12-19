@@ -12,4 +12,5 @@ public interface CourseInter {
 
     void update(String type, UUID teacherId, UUID studentId);
 
+    void remove(String type, UUID teacherId, String name, String surname);
 }

@@ -1,8 +1,11 @@
 package com.lesson.models;
 
+import java.util.ArrayList;
+import java.util.List;
 
 public final class StaticData {
     public static Teacher[] teachers;
+    public static List<Teacher> teacherList;
 
     private StaticData() {
     }
@@ -13,4 +16,8 @@ public final class StaticData {
         }
         teachers = new Teacher[count];
     }
+
+    public static void getTeachers() { teacherList = new ArrayList<>(); }
+
+
 }

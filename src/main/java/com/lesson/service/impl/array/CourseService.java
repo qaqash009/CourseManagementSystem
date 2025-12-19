@@ -21,7 +21,7 @@ public class CourseService implements CourseInter {
         teacher.setStudents(teacherService.addStudent(students, student));
     }
 
-
+    @Override
     public void create() {
         teacherService.create();
     }
@@ -35,37 +35,20 @@ public class CourseService implements CourseInter {
 
         } else if ("wagird".equalsIgnoreCase(type)) {
 
-            studentService.update(studentId);
+            studentService.update(teacherId, studentId);
 
         }
-        return;
-
     }
 
-    public Teacher[] remove(String type, UUID teacherId, String name, String surname) {
-        Teacher[] newTeachersArr = new Teacher[teacherId.length];
-        int count = 0;
+    @Override
+    public void remove(String type, UUID teacherId, String name, String surname) {
+        if ("muellim".equalsIgnoreCase(type)) {
 
-        if (!"muellim".equals(type)) {
-            return type;
-        }
+            teacherService.remove(name, surname);
 
-        for (int i = 0; i < teacherId.length; i++) {
-            Teacher teacher = teacherId[i];
-            if (teacher.getId().equals(teacherId) && teacher.getName().equals(name) && teacher.getSurname().equals(surname)) {
-                count++;
-            } else {
-                if (count > 0) {
-                    newTeachersArr[i - 1] = teacherId[i];
-                } else {
-                    newTeachersArr[i] = teacherId[i];
-                }
-            }
+        } else if ("wagird".equalsIgnoreCase(type)) {
+            studentService.remove(teacherId, name, surname);
         }
-        return newTeachersArr;
     }
-
-    // TODO REMOVE METHODU YARAT
-    // todo REMOVE METHODU QEBUL EDECEK STRING TYPE UUID TEACHERID STRING NAME STRING SURNAME
 }
 
