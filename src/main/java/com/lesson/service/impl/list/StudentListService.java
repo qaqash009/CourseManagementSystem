@@ -1,6 +1,7 @@
 package com.lesson.service.impl.list;
 
 import com.lesson.models.Student;
+import com.lesson.models.Teacher;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -8,6 +9,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.UUID;
 
+import static com.lesson.service.impl.array.StudentService.teacherService;
 import static com.lesson.util.ServiceUtil.setGender;
 
 public class StudentListService {
@@ -81,12 +83,32 @@ public class StudentListService {
 
     }
 
-    public Student getWithNameAndSurname(Student[] students, String name, String surname) {
+    public Student getWithNameAndSurname(List<Student> students, String name, String surname) {
+        for (int i = 0; i < students.size(); i++) {
+            Student student = students.get(i);
+            if (student.getName().equals(name) &&
+                    student.getSurname().equals(surname)) {
+                return student;
+                //TODO STUDENTSERVISIN ICERSINDEKI ILE EYNI OLACAG SADECE LIST FORMASINDA                            +++
+            }
+        }
         return null;
-        //TODO STUDENTSERVISIN ICERSINDEKI ILE EYNI OLACAG SADECE LIST FORMASINDA
     }
 
+    public Student getById(UUID studentId, UUID teacherId) {
 
-    // todo GETBYID METHODU YARAT
+        Teacher teacher = teacherService.getById(teacherId);
+        List<Student> students = teacher.getStudentList();
+
+        for (int i = 0; i < students.size(); i++) {
+            Student student = students.get(i);
+
+            if (student.getId().equals(studentId)) {
+                return student;
+            }
+        }
+        return null;
+        // todo GETBYID METHODU YARAT                                                                                +++
+    }
+
 }
-

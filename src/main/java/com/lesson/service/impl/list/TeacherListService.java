@@ -104,6 +104,17 @@ public class TeacherListService {
         return students1;
     }
 
+    public List<Student> addStudent(List<Student> students, Student student) {
+        List<Student> newStudentList = new ArrayList<>();
+
+        for (int i = 0; i < students.size(); i++) {
+            Student student1 = students.get(i);
+            newStudentList.add(student1);
+        }
+        newStudentList.add(student);
+        return newStudentList;
+    }                       //todo                                                                                      +++   +++   +++
+
 
     public Teacher getById(UUID teacherId) {
         for (int i = 0; i < teachers.length; i++) {
@@ -112,9 +123,21 @@ public class TeacherListService {
             }
         }
         return null;
-        //todo convert to list
+        //todo convert to list                                                                                          +++   +++   +++
     }
 
+    public List<Teacher> getById(List<Teacher> teachers, UUID teacherId) {
+        List<Teacher> teacherList = new ArrayList<>();
+
+        for (int i = 0; i < teachers.size(); i++) {
+            Teacher teacher = teachers.get(i);
+            if (teacher.getId().equals(teacherId)) {
+                teacherList.add(teacher);
+                return teacherList;
+            }
+        }
+        return teacherList;
+    }
 
     public Teacher[] remove(String name, String surname) {
         Teacher[] newTeachersArr = new Teacher[teachers.length];
@@ -132,6 +155,18 @@ public class TeacherListService {
             }
         }
         return newTeachersArr;
-//todo convert to list
+//todo convert to list                                                                                                  +++   +++   +++
+    }
+
+    public List<Teacher> remove(List<Teacher> teachers, String name, String surname) {
+        List<Teacher> newTeachersList = new ArrayList<>();
+        for (int i = 0; i < teachers.size(); i++) {
+            Teacher teacher = teachers.get(i);
+
+            if (!(teacher.getName().equals(name) && teacher.getSurname().equals(surname))) {
+                newTeachersList.add(teacher);
+            }
+        }
+        return newTeachersList;
     }
 }

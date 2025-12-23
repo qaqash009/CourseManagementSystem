@@ -16,7 +16,7 @@ public class Teacher extends Person {
     private Student[] students;
     private List<Student> studentList;
 
-    public Teacher(String name, String surname, int age, Gender gender, Double salary, Student[] students) {
+    public Teacher(String name, String surname, int age, Gender gender, Double salary, List<Student> students) {
         super(name, surname, age, gender);
         this.salary = salary;
         this.students = students;

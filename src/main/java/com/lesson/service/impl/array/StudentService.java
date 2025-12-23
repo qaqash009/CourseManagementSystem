@@ -13,7 +13,7 @@ import static com.lesson.util.ServiceUtil.setGender;
 
 public class StudentService {
 
-    private static TeacherService teacherService = new TeacherService();
+    public static TeacherService teacherService = new TeacherService();
 
     public Student create() {
 
@@ -129,8 +129,6 @@ public class StudentService {
         }
         return null;
         // todo convert to list
-
-
     }
 
 

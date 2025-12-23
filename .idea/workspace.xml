@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ca476e5-92d7-4f1c-b64e-0ad937e98a99" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lesson/service/impl/list/CourseListService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/models/StaticData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/models/StaticData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/service/impl/array/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/service/impl/array/CourseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/models/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/models/Teacher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/service/impl/array/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/service/impl/array/StudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/service/impl/array/TeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/service/impl/array/TeacherService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/service/impl/list/StudentListService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/service/impl/list/StudentListService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/service/impl/list/TeacherListService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/service/impl/list/TeacherListService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/service/inter/CourseInter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/service/inter/CourseInter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +36,9 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="35w2oPbwxuR9iuEhHZdchsa6tLQ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -57,7 +58,8 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/idris/githubproject/CourseManagementSystem&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode&quot;
   }
 }</component>
   <component name="RunManager">
