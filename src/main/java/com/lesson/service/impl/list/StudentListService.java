@@ -14,16 +14,17 @@ import static com.lesson.util.ServiceUtil.setGender;
 
 public class StudentListService {
 
+
     public List<Student> remove(List<Student> students, String name, String surname) {
-        List<Student> newStudentList = new ArrayList<>(students.size());
-        for (int i = 0; i < students.size(); i++) {
-            Student student = students.get(i);
-            if (student.getName().equals(name) && student.getSurname().equals(surname)) {
-                newStudentList.remove(student);
+        // todo cevirdim foreache                                                                                    +++
+        for (Student student : students) {
+            if (!(student.getName().equals(name) && student.getSurname().equals(surname))) {
+                students.add(student);
             }
         }
-        return newStudentList;
+        return students;
     }
+
 
     public Student create() {
 
@@ -84,31 +85,30 @@ public class StudentListService {
     }
 
     public Student getWithNameAndSurname(List<Student> students, String name, String surname) {
-        for (int i = 0; i < students.size(); i++) {
-            Student student = students.get(i);
-            if (student.getName().equals(name) &&
-                    student.getSurname().equals(surname)) {
+// todo cevirdim foreache                                                                                            +++
+        for (Student student : students) {
+            if (student.getName().equals(name) && student.getSurname().equals(surname)) {
                 return student;
-                //TODO STUDENTSERVISIN ICERSINDEKI ILE EYNI OLACAG SADECE LIST FORMASINDA                            +++
             }
         }
         return null;
     }
 
-    public Student getById(UUID studentId, UUID teacherId) {
 
+    public Student getById(UUID studentId, UUID teacherId) {
+// todo cevirdim foreache                                                                                            +++
         Teacher teacher = teacherService.getById(teacherId);
         List<Student> students = teacher.getStudentList();
 
-        for (int i = 0; i < students.size(); i++) {
-            Student student = students.get(i);
-
+        for (Student student : students) {
             if (student.getId().equals(studentId)) {
                 return student;
             }
         }
         return null;
-        // todo GETBYID METHODU YARAT                                                                                +++
     }
+
+
+    //todo Liste aid herweyi fordan foreache cevir
 
 }

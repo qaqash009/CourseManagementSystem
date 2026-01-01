@@ -115,7 +115,7 @@ public class TeacherService {
     }
 
 
-    public Teacher[] remove( String name, String surname) {
+    public Teacher[] remove(String name, String surname) {
         Teacher[] newTeachersArr = new Teacher[teachers.length];
         int count = 0;
         for (int i = 0; i < teachers.length; i++) {

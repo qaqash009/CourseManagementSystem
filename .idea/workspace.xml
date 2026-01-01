@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ca476e5-92d7-4f1c-b64e-0ad937e98a99" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lesson/service/impl/list/CourseListService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/models/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/models/Teacher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/service/impl/array/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/service/impl/array/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/service/impl/array/TeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/service/impl/array/TeacherService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/service/impl/list/StudentListService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/service/impl/list/StudentListService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lesson/service/impl/list/TeacherListService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lesson/service/impl/list/TeacherListService.java" afterDir="false" />
     </list>

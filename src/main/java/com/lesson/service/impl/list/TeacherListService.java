@@ -6,10 +6,7 @@ import com.lesson.models.Teacher;
 import com.lesson.service.impl.array.StudentService;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-import java.util.UUID;
+import java.util.*;
 
 import static com.lesson.models.StaticData.teachers;
 import static com.lesson.util.ServiceUtil.setGender;
@@ -35,10 +32,6 @@ public class TeacherListService {
 
     private List<Student> createStudents() {
         StudentService studentService = new StudentService();
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Sagirdlerin sayini qeyd edin: ");
-        int count = scanner.nextInt();
-
         List<Student> students = new ArrayList<>();
         students.add(studentService.create());
 
@@ -87,86 +80,44 @@ public class TeacherListService {
     }
 
     public Teacher getTeacherByNameAndSurname(String name, String surname) {
-        for (int i = 0; i < teachers.length; i++) {
-            if (teachers[i].getName().equals(name) && teachers[i].getSurname().equals(surname)) {
-                return teachers[i];
+        List<Teacher> teacherList = new ArrayList<>(Arrays.asList(teachers));
+// todo convert array to list                                                                                        +++
+        for (Teacher teacher : teacherList) {
+            if (teacher.getName().equals(name)
+                    && teacher.getSurname().equals(surname)) {
+                return teacher;
             }
         }
         return null;
     }
 
-    public Student[] addStudent(Student[] students, Student student) {
-        Student[] students1 = new Student[students.length + 1];
-        for (int i = 0; i < students1.length; i++) {
-            students1[i] = students[i];
-        }
-        students1[students.length] = student;
-        return students1;
-    }
 
     public List<Student> addStudent(List<Student> students, Student student) {
-        List<Student> newStudentList = new ArrayList<>();
 
-        for (int i = 0; i < students.size(); i++) {
-            Student student1 = students.get(i);
-            newStudentList.add(student1);
-        }
-        newStudentList.add(student);
-        return newStudentList;
-    }                       //todo                                                                                      +++   +++   +++
-
+        students.add(student);
+        return students;
+    }
 
     public Teacher getById(UUID teacherId) {
-        for (int i = 0; i < teachers.length; i++) {
-            if (teachers[i].getId().equals(teacherId)) {
-                return teachers[i];
+       // todo complite method wrongs List convert to Teacher, teacherList static import and foreach write.          +++
+        for (Teacher teacher : teachers) {
+            if (teacher.getId().equals(teacherId)) {
+                return teacher;
             }
         }
         return null;
-        //todo convert to list                                                                                          +++   +++   +++
     }
 
-    public List<Teacher> getById(List<Teacher> teachers, UUID teacherId) {
-        List<Teacher> teacherList = new ArrayList<>();
-
-        for (int i = 0; i < teachers.size(); i++) {
-            Teacher teacher = teachers.get(i);
-            if (teacher.getId().equals(teacherId)) {
-                teacherList.add(teacher);
-                return teacherList;
-            }
-        }
-        return teacherList;
-    }
-
-    public Teacher[] remove(String name, String surname) {
-        Teacher[] newTeachersArr = new Teacher[teachers.length];
-        int count = 0;
-        for (int i = 0; i < teachers.length; i++) {
-            Teacher teacher = teachers[i];
-            if (teacher.getName().equals(name) && teacher.getSurname().equals(surname)) {
-                count++;
-            } else {
-                if (count > 0) {
-                    newTeachersArr[i - 1] = teachers[i];
-                } else {
-                    newTeachersArr[i] = teachers[i];
-                }
-            }
-        }
-        return newTeachersArr;
-//todo convert to list                                                                                                  +++   +++   +++
-    }
 
     public List<Teacher> remove(List<Teacher> teachers, String name, String surname) {
-        List<Teacher> newTeachersList = new ArrayList<>();
-        for (int i = 0; i < teachers.size(); i++) {
-            Teacher teacher = teachers.get(i);
-
-            if (!(teacher.getName().equals(name) && teacher.getSurname().equals(surname))) {
-                newTeachersList.add(teacher);
+// todo cevir foreach e                                                                                              +++
+        for (Teacher teacher : teachers) {
+            if (!(teacher.getName().equals(name)
+                    && teacher.getSurname().equals(surname))) {
+                teachers.add(teacher);
             }
         }
-        return newTeachersList;
+        return teachers;
     }
+
 }
